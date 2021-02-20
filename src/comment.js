@@ -9,7 +9,7 @@ class Comments extends React.Component{
 
   render(){
     return(
-      <Comment.Group>
+      <Comment.Group style={{marginLeft:'400px'}}>
     <Header as='h3' dividing>
       Comments
     </Header>
