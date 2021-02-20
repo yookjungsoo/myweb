@@ -9,8 +9,6 @@ function App() {
     <p>안녕하세요</p>
     <Button primary> hihihi</Button>
     <Progress percent={66} />
-
-    1212123
     </div>
   );
 }
