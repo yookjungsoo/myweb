@@ -2,38 +2,23 @@ import React from 'react';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
 import {Button, Progress, Image, Divider, Icon, Header, Grid, Label} from 'semantic-ui-react'
-import ar from "./arin.jpg"
+import ar from "./choco.jpg"
 
 import Comments from './comment.js'
+import Buttons from "./buttons.js"
+import Menus from "./menu.js"
 
 function App() {
   return (
     <div>
-
+    <Menus />
     <Grid centered>
       <Grid.Row>
         <Image src = {ar} centered size='medium'/>
       </Grid.Row>
     
     <Grid.Row>
-    <Button as='div' labelPosition='right'>
-      <Button color='red'>
-        <Icon name='heart' />
-        Like
-      </Button>
-      <Label as='a' basic color='red' pointing='left'>
-        2,048
-      </Label>
-    </Button>
-    <Button as='div' labelPosition='right'>
-      <Button basic color='blue'>
-        <Icon name='fork' />
-        Fork
-      </Button>
-      <Label as='a' basic color='blue' pointing='left'>
-        2,048
-      </Label>
-    </Button>
+    <Buttons />
   </Grid.Row>
 
   </Grid>
@@ -62,7 +47,7 @@ function App() {
     <Button color='instagram'>
       <Icon name='instagram' /> Instagram
     </Button>
-    <Button color='youtube'>
+    <Button color='youtube' onClick={() => window.open("https://www.youtube.com/")}>
       <Icon name='youtube' /> YouTube
     </Button>
     </Grid>
