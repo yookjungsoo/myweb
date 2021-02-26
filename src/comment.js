@@ -3,6 +3,8 @@ import './App.css';
 import 'semantic-ui-css/semantic.min.css';
 import {Button, Comment, Form, Header} from 'semantic-ui-react'
 import user from "./user.png"
+import moment from 'moment';
+import db from './fb.js'
 
 function SingleComment (detail) {
   return(
@@ -11,7 +13,7 @@ function SingleComment (detail) {
       <Comment.Content>
         <Comment.Author as='a'>Guest</Comment.Author>
         <Comment.Metadata>
-          <div>10min before</div>
+          <div>{moment().format('YYYY MMMM Do , h:mm a')}</div>
         </Comment.Metadata>
         <Comment.Text>{detail.content}</Comment.Text>
         <Comment.Actions>
@@ -22,6 +24,18 @@ function SingleComment (detail) {
   )
 }
 
+let componentDidMount = () => {
+  db.collection("comments").get().then((querySnapshot) => {
+    let comments = []
+    querySnapshot.forEach((doc) => {
+      comments.push(doc.data())
+        console.log(doc.data());
+    });
+    return comments
+}).then(res => console.log(res))
+}
+
+componentDidMount()
 
 
 class Comments extends React.Component{
@@ -30,21 +44,24 @@ class Comments extends React.Component{
     super()
     this.state = {
       inputContent : '',
-      commentsList : []
+      inputTime : "",
+      writer : "",
+      commentsList : [],
     }
   }
 
+
   render(){
     return(
-      <Comment.Group style={{marginLeft:'400px'}}>
+      <Comment.Group className="comments">
     <Header as='h3' dividing>
       Comments
     </Header>
     
     {this.state.commentsList.map(comments => <SingleComment content = {comments}/>)}
 
-    <Form reply>
-      <Form.TextArea value = {this.state.inputContent} placeholder = "댓글을 입력해주세요" onChange={(e) => this.setState({inputContent: e.target.value})}  />
+    <Form reply className="form">
+      <Form.TextArea value = {this.state.inputContent} placeholder = "댓글을 입력해주세요" onChange={(e) => this.setState({inputContent: e.target.value})} className="comment_input"  />
       <Button content='Add Reply' labelPosition='left' icon='edit' primary
       onClick={() => alert(this.setState( (prevState) => {return{
         commentsList : [...prevState.commentsList, this.state.inputContent],

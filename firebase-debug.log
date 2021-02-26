@@ -1,0 +1,47 @@
+[debug] [2021-02-23T17:40:57.949Z] ----------------------------------------------------------------------
+[debug] [2021-02-23T17:40:57.951Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\alsue\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-02-23T17:40:57.951Z] CLI Version:   9.4.0
+[debug] [2021-02-23T17:40:57.951Z] Platform:      win32
+[debug] [2021-02-23T17:40:57.951Z] Node Version:  v14.15.5
+[debug] [2021-02-23T17:40:57.952Z] Time:          Wed Feb 24 2021 02:40:57 GMT+0900 (대한민국 표준시)
+[debug] [2021-02-23T17:40:57.952Z] ----------------------------------------------------------------------
+[debug] [2021-02-23T17:40:57.952Z] 
+[debug] [2021-02-23T17:40:57.957Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-02-23T17:40:57.958Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\alsue\OneDrive - Avanti Gardens\Coding\myweb
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using woosuktime. 
+[debug] [2021-02-23T17:41:03.851Z] > refreshing access token with scopes: []
+[debug] [2021-02-23T17:41:03.851Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-23T17:41:04.232Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 23 Feb 2021 17:41:05 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-23T17:41:04.237Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/woosuktime [none]
+[debug] [2021-02-23T17:41:04.944Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/woosuktime 200
+[debug] [2021-02-23T17:41:04.944Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/woosuktime {"projectId":"woosuktime","projectNumber":"323571326599","displayName":"woosuktime","name":"projects/woosuktime","resources":{"hostingSite":"woosuktime","realtimeDatabaseInstance":"woosuktime-default-rtdb","storageBucket":"woosuktime.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
